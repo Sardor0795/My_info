@@ -7,5 +7,4 @@ The call to prompt returns the text from the input field or null if the input wa
 shows a message and waits for the user to press “OK” or “Cancel”. It returns true for OK and false for Cancel/Esc.
 
 
-
 */
