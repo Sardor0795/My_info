@@ -1,0 +1,7 @@
+/*
+
+source panel in dev tool in chrome
+logging
+
+
+*/
