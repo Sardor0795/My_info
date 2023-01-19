@@ -42,4 +42,24 @@ Although, there are cases when structuredClone fails.
 
 For instance, when an object has a function property:
 
+
+let obj = {
+    name: "nn",
+    get() {
+        console.log(5);
+    },
+};
+
+let obj2 = structuredClone(obj);
+
+obj2.get();
+console.log(obj2);
+
+
+only strdClone cannot clone function
+
+for in, Obj.assign, ...op vs strdClone
+
+
+
 */
