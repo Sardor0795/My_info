@@ -23,4 +23,7 @@ While choosing a name try to use the most abstract word. Like obj, data, value, 
 The ideal name for a variable is data. Use it everywhere you can. Indeed, every variable holds data, right?
 
 …But what to do if data is already taken? Try value, it’s also universal. After all, a variable eventually gets a value.
+
+
+all of this is irony
 */
