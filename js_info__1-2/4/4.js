@@ -97,4 +97,37 @@ A function can be copied between objects.
 When a function is called in the “method” syntax: object.method(), the value of this during the call is object.
 Please note that arrow functions are special: they have no this. When this is accessed inside an arrow function, it is taken from outside.
 
+
+function makeUser() {
+  return {
+    name: "John",
+    ref() {
+      return this;
+    }
+  };
+}
+
+let user = makeUser();
+
+alert( user.ref().name ); // John
+Now it works, because user.ref() is a method. And the value of this is set to the object before dot ..
+
+let calc = {
+  count: 0,
+  read(a, b) {
+    console.log(this.count);
+    return this;
+  },
+  add() {
+    this.count++;
+    return this;
+  },
+  sub() {
+    this.count--;
+    return this;
+  },
+};
+
+calc.read().add().read().add().add().read();
+
 */
