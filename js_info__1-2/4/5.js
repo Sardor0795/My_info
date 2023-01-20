@@ -146,5 +146,51 @@ In this chapter we only cover the basics about objects and constructors. They ar
 
 After we learn that, we return to objects and cover them in-depth in the chapters Prototypes, inheritance and Classes.
 
+let obj = {};
+
+function A() {
+  return obj;
+}
+function B() {
+  return obj;
+}
+
+let a = new A();
+let b = new B();
+
+console.log(a == b); // true
+
+function Calculator() {
+  this.read = function () {
+    this.a = 10;
+    this.b = 10;
+  };
+  this.sum = function () {
+    return this.a + this.b;
+  };
+  this.mul = function () {
+    return this.a * this.b;
+  };
+}
+
+let calc = new Calculator();
+
+calc.read(); // notice there
+
+console.log(calc.mul());
+
+
+function Accum(startVal) {
+  this.value = startVal;
+
+  this.add = function (s) {
+    this.value += s;
+  };
+}
+
+let acc = new Accum(10);
+
+acc.add(10);
+console.log(acc.value);
 
 */
